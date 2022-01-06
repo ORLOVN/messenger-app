@@ -1,0 +1,21 @@
+.chats__pane {
+    display: inline-grid;
+    grid-template-columns: 400px auto;
+    height: 100%;
+    width: 100%;
+}
+.chats__details-blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+
+}
