@@ -5,7 +5,7 @@ const tmpl = `
 <div class="error__back">
 <div class="error__title">404</div>
 <div class="error__description">Вы куда-то не туда зашли</div>
-<div class="error__back-link"><a href="./chat">Назад к чатам</a>
+<div class="error__back-link"><a href="./chats">Назад к чатам</a>
 </div>
 `;
 
