@@ -17,6 +17,6 @@ export class ProfileSettings extends CompClass {
         this.backButton.addEventListener("click",(event)=>this.backButtonClickHandler(event));
     }
     backButtonClickHandler(event){
-        document.location.href="./chat";
+        document.location.href="./chats";
     }
 }

@@ -7,8 +7,10 @@ export function uniqNumber(name){
     return name+uniqCounter;
 }
 
+// Инструменты для валидации форм. Bad-функция вернет правдивое значение (строку или true), если поле ввода не прошло
+// валидацию.
 export const validTools ={
-    beautifyPhone: function (str) {
+    beautifyPhone: function (str) { //функция для приведения телефона к расивому формату (888) 888-8888
         str = str.replace(/[^0-9]/g, '');
         let area = str.substr(0, 3);
         let pre = str.substr(3, 3);
@@ -93,7 +95,7 @@ export function TemplateCompile(tmpl,tmplData){
 
 export function ReplaceTag(tag,NodeHTML){
     if (document.querySelector(tag)) {
-        document.querySelector(tag).replaceWith(NodeHTML);
+        document.querySelector(tag).replaceWith(NodeHTML)
     }
 }
 export function ParseStringHTML(stringHTML){
@@ -106,7 +108,6 @@ export function ParseNReplaceTag(tag,stringHTML){
 export class CompClass {
     constructor(tag,tmpl,tmplData,styles=null) {
         this.tmpl = tmpl;
-        this.signinForm = {};
         this.node = ParseStringHTML(TemplateCompile(tmpl, tmplData));
         ReplaceTag(tag, this.node);
 
@@ -120,8 +121,8 @@ export class CompClass {
                 element.setAttribute('class',newClass?newClass:oldClass);
             })
         }
-
-        this.appElements = this.node.querySelectorAll('[id^="app-"]') // все елементы с id начинающийчся с app-, будт поключены к свойстван текущего объекта для легкого доступа
+        // все елементы с id начинающийчся с app-, будт поключены к свойстван текущего объекта для легкого доступа
+        this.appElements = this.node.querySelectorAll('[id^="app-"]');
         this.appElements.forEach( (element)=> {
             let id =  element.getAttribute('id');
             id = id.slice(4,id.length);
@@ -143,20 +144,5 @@ export class CompClass {
         }
     }
 
-    onInit(){};
-}
-
-export class AppCompClass {
-    constructor(tag,tmpl,tmplData){
-        this.tmpl = tmpl;
-        /*let nodeReplaced = document.querySelector(tag);
-        console.log(nodeReplaced);
-        if (nodeReplaced) {
-            let attr = nodeReplaced.attributes;
-        }*/
-        this.node = ParseStringHTML(TemplateCompile(tmpl,tmplData));
-        ReplaceTag(tag,this.node);
-        this.onInit();
-    }
     onInit(){};
 }

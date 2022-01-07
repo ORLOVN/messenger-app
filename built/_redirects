@@ -1,4 +1,4 @@
-# Редиректы для Netlify. Копируйте этот файл в папку built.
+# Редиректы для Netlify. Копируйте этот файл в папку dist.
 /signin     /?path=signin
 /signup      /?path=signup
 /profile     /?path=profile

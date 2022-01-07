@@ -20,7 +20,7 @@ export class SignIn extends CompClass {
         let test = true;
         test &= validTools.validate(this.loginLabel,validTools.badLogin(this.login.value));
         test &= validTools.validate(this.passwordLabel,validTools.badPassword(this.password.value));
-        if (test) {window.location.href = '/chat'}
+        if (test) {window.location.href = '/chats'}
     }
 
 
