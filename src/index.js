@@ -17,7 +17,7 @@ if (path) {
     path = path.slice(1,path.length)
 }
 //Альтернативный способ роутинга через get параметры был добален для Netlify redirect, так как на Netlify роутинг как на
-//express не возможен. Netlify redirect находится в built/_redirects
+//express не возможен. Netlify redirect находится в dist/_redirects
 const queryDict = {};
 location.search.substr(1).split("&").forEach(
     function(item) {

@@ -1,2 +1,7 @@
-# Redirects from what the browser requests to what we serve
-/*             /*
+# Редиректы для Netlify.
+/signin     /?path=signin
+/signup      /?path=signup
+/profile     /?path=profile
+/chats       /?path=chats
+/changepsw   /?path=changepsw
+/*           /?path=404 404

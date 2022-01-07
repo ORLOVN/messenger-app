@@ -30,7 +30,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir built"
+    "build": "parcel build src/index.html"
   },
   "source": "/app-messenger/src",
   "version": "1.0.0"
