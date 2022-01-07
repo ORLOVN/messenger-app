@@ -1,6 +1,7 @@
-# Редиректы для Netlify. Копируйте этот файл в папку dist.
+# Редиректы для Netlify.
 /signin     /?path=signin
 /signup      /?path=signup
 /profile     /?path=profile
 /chats       /?path=chats
 /changepsw   /?path=changepsw
+/*           /?path=404 404
